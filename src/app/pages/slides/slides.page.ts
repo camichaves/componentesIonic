@@ -8,21 +8,7 @@ SwiperCore.use([Autoplay, Keyboard, Pagination, Scrollbar, Zoom]);
   selector: 'app-slides',
   templateUrl: './slides.page.html',
   styleUrls: ['./slides.page.scss'],
-  template: `
-  <ion-content>
-    <ion-slides pager="true" [options]="slideOpts">
-      <ion-slide>
-        <h1>Slide 1</h1>
-      </ion-slide>
-      <ion-slide>
-        <h1>Slide 2</h1>
-      </ion-slide>
-      <ion-slide>
-        <h1>Slide 3</h1>
-      </ion-slide>
-    </ion-slides>
-  </ion-content>
-`
+
 })
 
 
