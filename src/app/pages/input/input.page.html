@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>input</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-item>
+  <ion-label position="stacked">Nombre</ion-label>
+  <ion-input [(ngModel)]="datosPersonales[0]"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">Apellido</ion-label>
+  <ion-input [(ngModel)]="datosPersonales[1]"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="stacked">Segundo Apellido</ion-label>
+  <ion-input (ionChange)="mostrarVariables()" [(ngModel)]="datosPersonales[2]"></ion-input>
+</ion-item>
+
+</ion-content>

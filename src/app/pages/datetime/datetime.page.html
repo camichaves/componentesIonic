@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>datetime</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item button="true" id="open-date-input">
+    <ion-label>Date</ion-label>
+    <ion-text slot="end">{{ dateValue }}</ion-text>
+    <ion-popover trigger="open-date-input" show-backdrop="false">
+      <ng-template>
+        <ion-datetime
+          #popoverDatetime
+          presentation="date"
+          (ionChange)="dateValue = formatDate(popoverDatetime.value)"
+        ></ion-datetime>
+      </ng-template>
+    </ion-popover>
+  </ion-item>
+  
+</ion-content>

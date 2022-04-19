@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetController, MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-action-sheet',
@@ -8,9 +8,11 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class ActionSheetPage implements OnInit {
 
-  constructor(public actionSheetController: ActionSheetController) { }
+  constructor(public actionSheetController: ActionSheetController, 
+    private menu: MenuController) { }
 
   async ngOnInit() {
+    this.menu.close();
     this.presentActionSheet();
   }
 
